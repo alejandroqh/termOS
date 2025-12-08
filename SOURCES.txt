@@ -1,0 +1,219 @@
+# TermOS Source Code Availability
+
+This file provides information about obtaining source code for GPL-licensed components included in TermOS, in compliance with GPL v2 and GPL v3 license requirements.
+
+## Source Code Distribution Method
+
+TermOS provides source code availability through references to upstream source repositories. All GPL-licensed components are built from their original upstream sources without modification (except for Alpine Linux packaging).
+
+---
+
+## GPL v2 LICENSED COMPONENTS
+
+### Linux Kernel (stable)
+- **License**: GNU GPL v2
+- **Source**: https://www.kernel.org/
+- **Direct Download**: https://cdn.kernel.org/pub/linux/kernel/
+- **Git Repository**: https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+- **Note**: Specific kernel version used can be found with: `uname -r` on your TermOS system
+
+### eudev (Device Manager)
+- **License**: GNU GPL v2
+- **Source**: https://github.com/eudev-project/eudev
+- **Git Clone**: `git clone https://github.com/eudev-project/eudev.git`
+
+### D-Bus (Message Bus System)
+- **License**: AFL-2.1 OR GPL-2.0
+- **Source**: https://gitlab.freedesktop.org/dbus/dbus
+- **Git Clone**: `git clone https://gitlab.freedesktop.org/dbus/dbus.git`
+
+### NetworkManager
+- **License**: GNU GPL v2
+- **Source**: https://gitlab.freedesktop.org/NetworkManager/NetworkManager
+- **Git Clone**: `git clone https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git`
+- **Releases**: https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/releases
+
+### BlueZ (Bluetooth Stack)
+- **License**: GNU GPL v2
+- **Source**: https://github.com/bluez/bluez
+- **Git Clone**: `git clone https://github.com/bluez/bluez.git`
+- **Website**: http://www.bluez.org/
+
+### cryptsetup (LUKS Disk Encryption)
+- **License**: GNU GPL v2
+- **Source**: https://gitlab.com/cryptsetup/cryptsetup
+- **Git Clone**: `git clone https://gitlab.com/cryptsetup/cryptsetup.git`
+
+### btrfs-progs (Btrfs Filesystem Utilities)
+- **License**: GNU GPL v2
+- **Source**: https://github.com/kdave/btrfs-progs
+- **Git Clone**: `git clone https://github.com/kdave/btrfs-progs.git`
+
+### e2fsprogs (ext2/ext3/ext4 Filesystem Utilities)
+- **License**: GNU GPL v2
+- **Source**: https://git.kernel.org/pub/scm/fs/ext2/e2fsprogs.git
+- **Git Clone**: `git clone https://git.kernel.org/pub/scm/fs/ext2/e2fsprogs.git`
+
+### ALSA Utilities (Audio)
+- **License**: GNU GPL v2
+- **Source**: https://github.com/alsa-project/alsa-utils
+- **Git Clone**: `git clone https://github.com/alsa-project/alsa-utils.git`
+
+### Git (Version Control System)
+- **License**: GNU GPL v2
+- **Source**: https://git-scm.com/
+- **Git Clone**: `git clone https://github.com/git/git.git`
+- **Kernel.org Mirror**: https://git.kernel.org/pub/scm/git/git.git
+
+### polkit (Authorization Framework)
+- **License**: GNU GPL v2
+- **Source**: https://gitlab.freedesktop.org/polkit/polkit
+- **Git Clone**: `git clone https://gitlab.freedesktop.org/polkit/polkit.git`
+
+### util-linux (Core System Utilities)
+- **License**: GNU GPL v2
+- **Source**: https://github.com/util-linux/util-linux
+- **Git Clone**: `git clone https://github.com/util-linux/util-linux.git`
+- **Kernel.org Mirror**: https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git
+
+### mpv (Media Player)
+- **License**: GNU GPL v2+
+- **Source**: https://mpv.io/
+- **Git Clone**: `git clone https://github.com/mpv-player/mpv.git`
+
+### ELinks (Text Web Browser)
+- **License**: GNU GPL v2
+- **Source**: http://elinks.or.cz/
+- **Git Clone**: `git clone https://github.com/rkd77/elinks.git`
+
+### Syslinux (x86_64 Bootloader)
+- **License**: GNU GPL v2
+- **Source**: https://wiki.syslinux.org/
+- **Git Clone**: `git clone https://github.com/geneC/syslinux.git`
+- **Note**: Only included in x86_64 builds
+
+---
+
+## GPL v3 LICENSED COMPONENTS
+
+### GRUB (Bootloader)
+- **License**: GNU GPL v3
+- **Source**: https://www.gnu.org/software/grub/
+- **Git Clone**: `git clone https://git.savannah.gnu.org/git/grub.git`
+- **FTP Download**: https://ftp.gnu.org/gnu/grub/
+
+### greetd (Login Manager)
+- **License**: GNU GPL v3
+- **Source**: https://git.sr.ht/~kennylevinsen/greetd
+- **Git Clone**: `git clone https://git.sr.ht/~kennylevinsen/greetd`
+- **Releases**: https://git.sr.ht/~kennylevinsen/greetd/refs
+
+### tuigreet (TUI Greeter for greetd)
+- **License**: GNU GPL v3
+- **Source**: https://github.com/apognu/tuigreet
+- **Git Clone**: `git clone https://github.com/apognu/tuigreet.git`
+
+### cool-retro-term (Terminal Emulator)
+- **License**: GNU GPL v3
+- **Source**: https://github.com/Swordfish90/cool-retro-term
+- **Git Clone**: `git clone --recursive https://github.com/Swordfish90/cool-retro-term.git`
+- **Note**: Requires recursive clone for submodules
+
+---
+
+## ALPINE LINUX PACKAGE SOURCES
+
+All components are built from Alpine Linux packages. Alpine's build system (abuild) fetches sources from upstream. You can obtain the exact source packages used in TermOS through:
+
+### Alpine Package Repository
+- **Repository**: https://gitlab.alpinelinux.org/alpine/aports
+- **Browse Packages**: https://pkgs.alpinelinux.org/
+- **Git Clone**: `git clone https://gitlab.alpinelinux.org/alpine/aports.git`
+
+### Finding Specific Package Sources
+Each Alpine package's APKBUILD file contains the upstream source URL. Example:
+```bash
+# Clone Alpine repository
+git clone https://gitlab.alpinelinux.org/alpine/aports.git
+cd aports
+
+# View package source definition
+cat main/linux-stable/APKBUILD
+```
+
+---
+
+## OBTAINING SOURCE CODE FOR YOUR SPECIFIC TERMOS BUILD
+
+To get the exact source code versions matching your TermOS installation:
+
+### Method 1: Check Package Versions
+```bash
+# On your TermOS system, list installed packages with versions
+apk info -v | grep -E 'linux-|grub-|networkmanager'
+
+# Get detailed package info including source
+apk info -a package-name
+```
+
+### Method 2: Download from Alpine Mirrors
+```bash
+# Download source package from Alpine
+apk fetch --source package-name
+```
+
+### Method 3: Build from APKBUILD
+```bash
+# Get APKBUILD from Alpine aports repository
+# and build from source using abuild
+abuild fetch unpack
+```
+
+---
+
+## ADDITIONAL COMPLIANCE INFORMATION
+
+### Written Offer (GPL v2 Section 3b, GPL v3 Section 6b)
+
+For any GPL-licensed binary you receive from TermOS, you are entitled to receive the corresponding source code. This document serves as our written offer to provide source code.
+
+**Valid for**: 3 years from the date of TermOS distribution
+**Source availability**: All source code is available at the upstream URLs listed above
+**Cost**: No charge beyond the cost of physically performing source distribution
+
+### Modified Components
+
+TermOS does not modify the source code of GPL-licensed components. All components are built from upstream sources using Alpine Linux packaging (APKBUILD files), which add compilation flags and packaging metadata but do not modify the underlying source code.
+
+### TermOS-Specific Components
+
+TermOS integration scripts and configuration files (in termos-aports/, termos-config/, termos-mkimage/) are licensed under the MIT License and are available at:
+- **Repository**: https://github.com/alejandroqh/termos
+
+---
+
+## FIRMWARE AND MICROCODE
+
+### linux-firmware
+- **Source**: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+- **License**: Mixed (see WHENCE file in repository)
+- **Note**: Contains binary firmware with redistribution licenses; source code not always available
+
+### CPU Microcode (Intel/AMD)
+- **Intel Source**: https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files
+- **AMD Source**: Included in linux-firmware repository
+- **License**: Redistributable proprietary licenses
+- **Note**: Binary-only redistribution
+
+---
+
+## CONTACT
+
+For questions about source code availability or GPL compliance:
+- **Email**: a@q39.dev
+- **Repository Issues**: https://github.com/alejandroqh/termos/issues
+
+---
+
+Last updated: 2025-12-07
+TermOS Version: Beta 0.1

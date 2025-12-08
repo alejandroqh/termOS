@@ -1,0 +1,207 @@
+# TermOS License Information
+
+TermOS is a Linux distribution that combines multiple open-source components, each with its own license. This document provides an overview of the licensing for TermOS and its components.
+
+## License Summary
+
+TermOS includes components under various open-source licenses:
+
+| License Type | Key Components | Redistribution Impact |
+|--------------|----------------|----------------------|
+| **GNU GPL v2** | Linux Kernel, NetworkManager, BlueZ, cryptsetup, btrfs-progs, utilities | Source code must be available |
+| **GNU GPL v3** | GRUB, greetd, tuigreet, cool-retro-term | Source code must be available |
+| **Apache 2.0** | Alpine Linux base, alacritty | Attribution required, notice retention |
+| **MIT** | term39, cage, wlroots, pipewire, most Wayland stack | Attribution required, permissive |
+| **BSD** | OpenRC, openssh, sof-firmware | Attribution required, permissive |
+| **ISC** | sudo | Attribution required, permissive |
+| **Mixed/Proprietary** | linux-firmware, CPU microcode | Redistributable with restrictions |
+
+**Quick Compliance Checklist for Redistribution:**
+- ✓ Include this LICENSE file or equivalent
+- ✓ Provide access to GPL component source code (or point to upstream)
+- ✓ Retain copyright notices for all components
+- ✓ Include firmware license notices (see linux-firmware WHENCE file)
+
+## Component License Overview
+
+### Core System Components
+
+| Component | License | Source |
+|-----------|---------|--------|
+| Alpine Linux | Apache License 2.0 | https://gitlab.alpinelinux.org/alpine/aports |
+| Linux Kernel (stable) | GNU GPL v2 | https://www.kernel.org/ |
+| OpenRC | BSD 2-Clause | https://github.com/OpenRC/openrc |
+| eudev | GNU GPL v2 | https://github.com/eudev-project/eudev |
+| D-Bus | AFL-2.1 OR GPL-2.0 | https://gitlab.freedesktop.org/dbus/dbus |
+
+### Display & Desktop Environment
+
+| Component | License | Source |
+|-----------|---------|--------|
+| term39 | MIT License | https://github.com/alejandroqh/term39 |
+| greetd | GNU GPL v3 | https://git.sr.ht/~kennylevinsen/greetd |
+| tuigreet | GNU GPL v3 | https://github.com/apognu/tuigreet |
+| cage (Wayland compositor) | MIT License | https://github.com/cage-kiosk/cage |
+| wlroots | MIT License | https://gitlab.freedesktop.org/wlroots/wlroots |
+| seatd | MIT License | https://git.sr.ht/~kennylevinsen/seatd |
+| xwayland | MIT License | https://gitlab.freedesktop.org/xorg/xserver |
+| mesa-dri-gallium | MIT License | https://gitlab.freedesktop.org/mesa/mesa |
+| libinput | MIT License | https://gitlab.freedesktop.org/libinput/libinput |
+
+### Terminal Emulators
+
+| Component | License | Source |
+|-----------|---------|--------|
+| foot | MIT License | https://codeberg.org/dnkl/foot |
+| alacritty | Apache License 2.0 | https://github.com/alacritty/alacritty |
+| cool-retro-term | GNU GPL v3 | https://github.com/Swordfish90/cool-retro-term |
+
+### Audio System
+
+| Component | License | Source |
+|-----------|---------|--------|
+| pipewire | MIT License | https://gitlab.freedesktop.org/pipewire/pipewire |
+| wireplumber | MIT License | https://gitlab.freedesktop.org/pipewire/wireplumber |
+| ALSA utilities | GNU GPL v2 | https://github.com/alsa-project/alsa-utils |
+| sof-firmware | BSD 3-Clause | https://github.com/thesofproject/sof-bin |
+
+### Networking & Connectivity
+
+| Component | License | Source |
+|-----------|---------|--------|
+| NetworkManager | GNU GPL v2 | https://gitlab.freedesktop.org/NetworkManager/NetworkManager |
+| BlueZ (Bluetooth) | GNU GPL v2 | https://github.com/bluez/bluez |
+| openssh-client | BSD License | https://www.openssh.com/ |
+
+### Storage & Filesystems
+
+| Component | License | Source |
+|-----------|---------|--------|
+| cryptsetup (LUKS) | GNU GPL v2 | https://gitlab.com/cryptsetup/cryptsetup |
+| btrfs-progs | GNU GPL v2 | https://github.com/kdave/btrfs-progs |
+| e2fsprogs | GNU GPL v2 | https://git.kernel.org/pub/scm/fs/ext2/e2fsprogs.git |
+
+### Bootloaders
+
+| Component | License | Source |
+|-----------|---------|--------|
+| GRUB | GNU GPL v3 | https://www.gnu.org/software/grub/ |
+| Syslinux (x86_64 only) | GNU GPL v2 | https://wiki.syslinux.org/ |
+
+### Firmware
+
+| Component | License | Source |
+|-----------|---------|--------|
+| linux-firmware | Mixed/Redistributable* | https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git |
+| AMD CPU microcode | Redistributable | https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git |
+| Intel CPU microcode | Redistributable | https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files |
+
+*Note: linux-firmware contains various proprietary firmware binaries with redistribution licenses. See WHENCE file in linux-firmware repository for details.
+
+### System Utilities
+
+| Component | License | Source |
+|-----------|---------|--------|
+| sudo | ISC License | https://www.sudo.ws/ |
+| vim | Vim License (GPL-compatible) | https://github.com/vim/vim |
+| git | GNU GPL v2 | https://git-scm.com/ |
+| zsh | MIT-like License | https://www.zsh.org/ |
+| polkit | GNU GPL v2 | https://gitlab.freedesktop.org/polkit/polkit |
+| util-linux | GNU GPL v2 | https://github.com/util-linux/util-linux |
+| mpv | GNU GPL v2+ | https://mpv.io/ |
+| elinks | GNU GPL v2 | http://elinks.or.cz/ |
+
+## TermOS Integration and Configuration
+
+The TermOS-specific integration scripts, configuration files, and package definitions (located in `termos-aports/`, `termos-config/`, and `termos-mkimage/`) are released under the **MIT License** (see below), except where noted otherwise.
+
+### MIT License (for TermOS-specific components)
+
+```
+MIT License
+
+Copyright (c) 2025 TermOS Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## Redistribution Notes
+
+When redistributing TermOS, you must comply with the licenses of all included components:
+
+### GPL Requirements (Source Code Availability)
+
+The following components require source code availability when distributing binaries:
+
+1. **GPL v2 components**: Linux Kernel, eudev, NetworkManager, BlueZ, cryptsetup, btrfs-progs, e2fsprogs, ALSA utilities, git, polkit, util-linux, mpv, elinks, D-Bus
+   - Sources available from respective upstream repositories (linked in tables above)
+   - Linux kernel source: https://www.kernel.org/
+
+2. **GPL v3 components**: greetd, tuigreet, cool-retro-term, GRUB
+   - Source code must be made available
+   - Sources available from respective upstream repositories
+
+3. **Syslinux (GPL v2)**: x86_64 builds only
+   - Source: https://wiki.syslinux.org/
+
+### Permissive License Requirements
+
+Components under MIT, Apache 2.0, BSD, and ISC licenses require:
+- Retention of copyright and permission notices
+- No additional redistribution restrictions
+- Attribution as specified in original licenses
+
+Key permissive components:
+- **Apache 2.0**: Alpine Linux, alacritty
+- **MIT**: term39, cage, wlroots, seatd, xwayland, mesa, libinput, foot, pipewire, wireplumber
+- **BSD**: OpenRC, openssh-client, sof-firmware
+- **ISC**: sudo
+
+### Firmware Redistribution
+
+**linux-firmware** contains mixed licenses:
+- Many proprietary firmware binaries with redistribution permission
+- Some components under GPL, BSD, or other open licenses
+- See the `WHENCE` file in the linux-firmware repository for complete licensing details
+- Redistributable but modification may be restricted for some firmware blobs
+
+**CPU Microcode** (AMD, Intel):
+- Redistributable under vendor-specific licenses
+- Generally allows redistribution but not modification
+
+## Full License Texts
+
+Full license texts for each component can be found at:
+
+- **Apache License 2.0**: https://www.apache.org/licenses/LICENSE-2.0
+- **GNU GPL v2**: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+- **GNU GPL v3**: https://www.gnu.org/licenses/gpl-3.0.html
+- **MIT License**: See above or https://opensource.org/licenses/MIT
+- **BSD 2-Clause**: https://opensource.org/licenses/BSD-2-Clause
+- **BSD 3-Clause**: https://opensource.org/licenses/BSD-3-Clause
+- **ISC License**: https://opensource.org/licenses/ISC
+- **Vim License**: https://github.com/vim/vim/blob/master/LICENSE
+
+## Contact
+
+For questions about TermOS licensing, please open an issue at the project repository.
+
+---
+
+Last updated: 2025-12-07
