@@ -13,6 +13,32 @@ TermOS is built on Alpine Linux (~5MB base) with OpenRC init system, providing a
 **Display Manager**: greetd + tuigreet
 **Desktop Environment**: term39
 
+## Screenshots
+
+### term39 Desktop Environment
+
+<p align="center">
+  <img src="screenshots/term39.png" alt="term39 Terminal Multiplexer" width="800"/>
+  <br/>
+  <em>term39 with multiple terminals and system monitoring</em>
+</p>
+
+### Wayland Retro Session (Default)
+
+<p align="center">
+  <img src="screenshots/cool-retro-term-wayland.png" alt="CRT-style Retro Terminal" width="800"/>
+  <br/>
+  <em>cool-retro-term with authentic CRT scanlines and phosphor glow</em>
+</p>
+
+### Framebuffer Mode
+
+<p align="center">
+  <img src="screenshots/framebuffer.png" alt="Framebuffer Mode" width="800"/>
+  <br/>
+  <em>Native framebuffer mode with Midnight Commander file manager</em>
+</p>
+
 ## Architecture Support
 
 TermOS is available for the following architectures:
@@ -54,6 +80,12 @@ Choose between two filesystem options:
 ### 3. Disk Encryption (LUKS2)
 
 **EFI systems only** - Full disk encryption using LUKS2
+
+<p align="center">
+  <img src="screenshots/lockscreen.png" alt="Term39  Unlock Screen" width="600"/>
+  <br/>
+  <em>Term39 passphrase unlock screen</em>
+</p>
 
 - **Cipher**: AES-XTS-Plain64
 - **Key size**: 512-bit
@@ -118,6 +150,12 @@ Automatic configuration includes:
 ## Available Sessions
 
 TermOS provides multiple session types, selectable at login:
+
+<p align="center">
+  <img src="screenshots/tuigreeter.png" alt="Session Selector" width="600"/>
+  <br/>
+  <em>greetd + tuigreet session selector at login</em>
+</p>
 
 | Session               | Terminal        | Compositor | Description                              |
 | --------------------- | --------------- | ---------- | ---------------------------------------- |
@@ -214,6 +252,12 @@ TermOS provides multiple session types, selectable at login:
 - **Welcome guide**: welcome.md for first-time users
 
 ## Installation Process
+
+<p align="center">
+  <img src="screenshots/termos-setup.png" alt="TermOS Installer" width="600"/>
+  <br/>
+  <em>termos-setup installer with dialog-based interface</em>
+</p>
 
 1. **Boot from ISO**: Boot TermOS installation media (USB or CD)
 2. **Login**: Username `root`, no password
