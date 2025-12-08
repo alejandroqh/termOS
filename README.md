@@ -13,45 +13,6 @@ TermOS is built on Alpine Linux (~5MB base) with OpenRC init system, providing a
 **Display Manager**: greetd + tuigreet
 **Desktop Environment**: term39
 
-## Package Versions
-
-Key components included in TermOS v0.1.0 (Alpine Edge snapshot 20251125):
-
-| Component | Version | Repository | Notes |
-|-----------|---------|------------|-------|
-| **term39** | 0.18.0-r0 | termos | Primary desktop environment |
-| **Alpine Linux** | Edge 20251125 | - | Rolling release snapshot |
-| **Linux Kernel** | 6.17.11-r0 | main | linux-stable package |
-| **Linux Firmware** | 20251125-r1 | main | Complete firmware collection |
-| **OpenRC** | 0.63-r1 | main | Init system |
-| **greetd** | 0.10.3-r8 | community | Login manager daemon |
-| **greetd-tuigreet** | 0.9.1-r0 | community | TUI greeter for greetd |
-| **cage** | 0.2.1-r0 | community | Wayland single-app compositor |
-| **wlroots** | 0.19.2-r0 | community | Wayland compositor library |
-| **mesa** | 25.2.7-r1 | main | GPU drivers (Intel, AMD, nouveau) |
-| **NetworkManager** | 1.54.2-r1 | main | Network configuration |
-| **GRUB** | 2.12-r8 | main | EFI bootloader |
-| **Syslinux** | 6.04_pre1-r19 | main | BIOS bootloader (x86_64) |
-| **cryptsetup** | 2.8.1-r0 | main | LUKS2 disk encryption |
-| **btrfs-progs** | 6.17.1-r0 | main | Btrfs filesystem utilities |
-| **e2fsprogs** | 1.47.3-r0 | main | ext2/ext3/ext4 utilities |
-| **PipeWire** | 1.4.9-r2 | community | Audio server |
-| **WirePlumber** | 0.5.12-r0 | community | PipeWire session manager |
-| **BlueZ** | 5.85-r1 | main | Bluetooth stack |
-| **foot** | 1.25.0-r0 | community | Wayland terminal emulator |
-| **alacritty** | 0.16.1-r0 | community | GPU-accelerated terminal |
-| **cool-retro-term** | 1.2.0-r0 | community | Retro CRT-style terminal |
-| **Midnight Commander** | 4.8.33-r2 | main | File manager |
-| **btop** | 1.4.0-r2 | community | System monitor |
-| **vim** | 9.1.1952-r0 | main | Text editor |
-| **zsh** | 5.9-r6 | main | Default shell |
-
-**Snapshot Date**: November 25, 2025
-**Build Date**: December 8, 2025
-**Architecture Support**: x86_64, aarch64
-
-Use `apk info -v <package>` on your installed system to check current package versions.
-
 ## Screenshots
 
 ### term39 Desktop Environment
@@ -428,6 +389,45 @@ After first boot:
 4. **term39 guide**: Press `Ctrl+A ?` in term39 for keybindings
 5. **Change session**: Select different session at login (greetd menu)
 6. **Alpine packages**: Use apk add/update/upgrade
+
+## Package Versions
+
+Key components included in TermOS v0.1.0 (Alpine Edge snapshot 20251125):
+
+| Component              | Version       | Repository | Notes                             |
+| ---------------------- | ------------- | ---------- | --------------------------------- |
+| **term39**             | 0.18.0-r0     | termos     | Primary desktop environment       |
+| **Alpine Linux**       | Edge 20251125 | -          | Rolling release snapshot          |
+| **Linux Kernel**       | 6.17.11-r0    | main       | linux-stable package              |
+| **Linux Firmware**     | 20251125-r1   | main       | Complete firmware collection      |
+| **OpenRC**             | 0.63-r1       | main       | Init system                       |
+| **greetd**             | 0.10.3-r8     | community  | Login manager daemon              |
+| **greetd-tuigreet**    | 0.9.1-r0      | community  | TUI greeter for greetd            |
+| **cage**               | 0.2.1-r0      | community  | Wayland single-app compositor     |
+| **wlroots**            | 0.19.2-r0     | community  | Wayland compositor library        |
+| **mesa**               | 25.2.7-r1     | main       | GPU drivers (Intel, AMD, nouveau) |
+| **NetworkManager**     | 1.54.2-r1     | main       | Network configuration             |
+| **GRUB**               | 2.12-r8       | main       | EFI bootloader                    |
+| **Syslinux**           | 6.04_pre1-r19 | main       | BIOS bootloader (x86_64)          |
+| **cryptsetup**         | 2.8.1-r0      | main       | LUKS2 disk encryption             |
+| **btrfs-progs**        | 6.17.1-r0     | main       | Btrfs filesystem utilities        |
+| **e2fsprogs**          | 1.47.3-r0     | main       | ext2/ext3/ext4 utilities          |
+| **PipeWire**           | 1.4.9-r2      | community  | Audio server                      |
+| **WirePlumber**        | 0.5.12-r0     | community  | PipeWire session manager          |
+| **BlueZ**              | 5.85-r1       | main       | Bluetooth stack                   |
+| **foot**               | 1.25.0-r0     | community  | Wayland terminal emulator         |
+| **alacritty**          | 0.16.1-r0     | community  | GPU-accelerated terminal          |
+| **cool-retro-term**    | 1.2.0-r0      | community  | Retro CRT-style terminal          |
+| **Midnight Commander** | 4.8.33-r2     | main       | File manager                      |
+| **btop**               | 1.4.0-r2      | community  | System monitor                    |
+| **vim**                | 9.1.1952-r0   | main       | Text editor                       |
+| **zsh**                | 5.9-r6        | main       | Default shell                     |
+
+**Snapshot Date**: November 25, 2025
+**Build Date**: December 8, 2025
+**Architecture Support**: x86_64, aarch64
+
+Use `apk info -v <package>` on your installed system to check current package versions.
 
 ## License
 
