@@ -246,7 +246,7 @@ TermOS provides multiple session types, selectable at login:
 ```
 /dev/sdX1  512MB   FAT32   /boot/efi  (EFI System Partition)
 /dev/sdX2  remainder  LUKS2   (Encrypted)
-    cryptroot   ext4/btrfs  /  (Root partition)
+			-> cryptroot   ext4/btrfs  /  (Root partition)
 ```
 
 ### BIOS Systems (MBR) - x86_64 only
