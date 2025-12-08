@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 #### Core System
+
 - Alpine Linux-based minimal distribution (~5MB base)
 - term39 (v0.18.0) as primary desktop environment
 - Full-screen terminal multiplexer experience
@@ -17,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - framebuffer mode support (80x50 inital, can be changed)
 
 #### Architecture Support
+
 - x86_64 architecture (PC, laptops)
   - EFI boot support with GRUB
   - BIOS boot support with extlinux/syslinux
@@ -26,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - EFI boot with GRUB
 
 #### Installation System
+
 - Dialog-based TUI installer (termos-setup v2.0)
 - Interactive disk selection menu
 - Automated disk partitioning
@@ -45,6 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Hardware detection and module loading
 
 #### Bootloader
+
 - GRUB bootloader for EFI systems
   - Encryption support (copies kernel/initramfs to EFI partition)
   - btrfs subvolume support
@@ -57,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Kernel update hooks for encrypted and btrfs systems
 
 #### System Configuration
+
 - NetworkManager for network management
 - seatd session manager
 - Hardware initialization scripts
@@ -69,6 +74,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - greetd on tty2 (agetty on tty2 disabled)
 
 #### Live Media
+
 - Bootable ISO/USB installation media
 - Console access for installation
 - Boot media auto-detection (/media/cdrom compatibility)
@@ -76,6 +82,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Post-install automatic termos-base installation
 
 #### Package System
+
 - termos-aports repository structure
 - term39 package (binary distribution from GitHub releases)
 - termos-base meta-package with all dependencies
@@ -89,6 +96,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - cryptsetup for encryption
 
 #### Documentation
+
 - Installation wizard with step-by-step dialogs
 - ASCII art branding
 - Welcome message (welcome.md)
@@ -96,6 +104,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CLAUDE.md project guidance for Claude Code
 
 ### Security
+
 - LUKS2 full disk encryption with strong defaults
 - User created with wheel group (sudo access)
 - Root password protection
@@ -103,6 +112,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Boot-time encryption passphrase with visual banner
 
 ### Known Limitations
+
 - Disk encryption only available on EFI systems (BIOS requires GRUB crypto which is not yet implemented)
 - First-boot network configuration requires nmtui or NetworkManager
 - Needs manual Time Zone setup
@@ -125,6 +135,7 @@ ISO checksums will be provided with the release artifacts.
 ### Installation
 
 Boot from ISO/USB and run:
+
 ```
 termos-setup
 ```
@@ -134,6 +145,7 @@ Follow the interactive installation wizard.
 ### Testing
 
 Tested on:
+
 - UTM (macOS ARM64) - aarch64 native virtualization
 - QEMU/KVM - x86_64 virtualization
 - Physical hardware - x86_64 EFI and BIOS systems

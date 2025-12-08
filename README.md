@@ -44,10 +44,10 @@ The `termos-setup` installer provides a guided installation with the following o
 
 Choose between two filesystem options:
 
-| Filesystem             | Features                              | Use Case                           |
-| ---------------------- | ------------------------------------- | ---------------------------------- |
-| **ext4**               | Traditional, stable, fast             | General use, maximum compatibility |
-| **btrfs**              | Modern, snapshots, compression (zstd) | Advanced users, snapshot support   |
+| Filesystem | Features                              | Use Case                           |
+| ---------- | ------------------------------------- | ---------------------------------- |
+| **ext4**   | Traditional, stable, fast             | General use, maximum compatibility |
+| **btrfs**  | Modern, snapshots, compression (zstd) | Advanced users, snapshot support   |
 
 **Note**: btrfs uses subvolumes (`@` for root, `@home` for /home) with automatic zstd compression and noatime optimization.
 
