@@ -1,1 +1,15 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 
+# IDE
+.vscode/
+.idea/
+
+# Build outputs
+*.iso
+*.tar.gz
+output/
