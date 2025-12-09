@@ -3,6 +3,28 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2025-12-09
+
+### Added
+
+- **Low RAM Boot Mode**: New default boot mode using `overlaytmpfs=yes` that keeps squashfs mounted from boot media instead of copying to RAM
+  - Reduces live CD RAM usage from ~3GB to ~1-1.5GB
+  - Enables installation on 4GB RAM machines (previously would fill tmpfs)
+  - Trade-off: USB/CD must remain inserted during live session
+- **High RAM Boot Option**: GRUB menu now includes "High RAM mode" for users with 8GB+ RAM who prefer faster I/O (loads everything to RAM like before)
+- **TermOS Control Center** (termos-cc v0.1.0): New system management utility
+
+### Changed
+
+- Default GRUB boot entry now uses overlay tmpfs mode for better low-memory compatibility
+- tmpfs overlay limited to 1GB (`overlaytmpfsflags=size=1G`) for controlled memory usage
+
+### Fixed
+
+- Live CD now works on machines with 4GB RAM without running out of memory during installation
+
+---
+
 ## [0.1.0] - 2025-12-08
 
 ### Added
@@ -121,12 +143,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Release Information
 
-**Version:** 0.1.0
-**Release Date:** December 8, 2025
-**Status:** Initial Beta Release
+**Version:** 0.2.0
+**Release Date:** December 9, 2025
+**Status:** Beta Release
 **Architectures:** x86_64, aarch64
 **Base:** Alpine Linux Edge
-**Desktop:** term39 v0.18.0
+**Desktop:** term39 v0.19.0
 
 ### Checksums
 
@@ -152,4 +174,5 @@ Tested on:
 
 ---
 
-[0.1.0]: https://github.com/yourusername/termos/releases/tag/v0.1.0
+[0.2.0]: https://github.com/alejandroqh/termos/releases/tag/v0.2.0
+[0.1.0]: https://github.com/alejandroqh/termos/releases/tag/v0.1.0
