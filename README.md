@@ -8,7 +8,7 @@ TermOS is built on Alpine Linux (~5MB base) with OpenRC init system, providing a
 
 **Version**: 0.3.0
 **Based on**: Alpine Linux Edge
-**Kernel**: Linux LTS 6.18.0
+**Kernel**: Linux LTS 6.18.0-r5
 **Init System**: OpenRC
 **Display Manager**: greetd + tuigreet
 **Desktop Environment**: term39 v0.20.0
@@ -175,7 +175,7 @@ TermOS provides multiple session types, selectable at login:
 ### Core System
 
 - **Base**: alpine-base, busybox-extras
-- **Kernel**: linux-stable (6.17+)
+- **Kernel**: linux-lts (6.18+)
 - **Init**: OpenRC, eudev, dbus
 - **Boot**: GRUB2 (EFI), Syslinux (BIOS), mkinitfs
 - **Firmware**: linux-firmware (Intel, AMD, WiFi, Bluetooth)
@@ -245,6 +245,7 @@ TermOS provides multiple session types, selectable at login:
 ### TermOS-Specific
 
 - **termos-setup**: Interactive installer with dialog-based UI
+- **termos-cc**: TermOS Control Center - system configuration utility
 - **termos-update**: Term39 update script
 - **termos-unlock**: LUKS unlock banner (encrypted systems)
 - **Session launchers**: termos-wayland-session, termos-wayland-retro, etc.
@@ -392,21 +393,21 @@ After first boot:
 
 ## Package Versions
 
-Key components included in TermOS v0.2.0 (Alpine Edge snapshot 20251125):
+Key components included in TermOS v0.3.0 (Alpine Edge snapshot 20251211):
 
 | Component              | Version       | Repository | Notes                             |
 | ---------------------- | ------------- | ---------- | --------------------------------- |
-| **term39**             | 0.18.0-r0     | termos     | Primary desktop environment       |
-| **Alpine Linux**       | Edge 20251125 | -          | Rolling release snapshot          |
-| **Linux Kernel**       | 6.17.11-r0    | main       | linux-stable package              |
+| **term39**             | 0.20.0-r0     | termos     | Primary desktop environment       |
+| **termos-cc**          | 0.1.0-r1      | termos     | TermOS Control Center             |
+| **Alpine Linux**       | Edge 20251211 | -          | Rolling release snapshot          |
+| **Linux Kernel**       | 6.18.0-r5     | main       | linux-lts package                 |
 | **Linux Firmware**     | 20251125-r1   | main       | Complete firmware collection      |
 | **OpenRC**             | 0.63-r1       | main       | Init system                       |
 | **greetd**             | 0.10.3-r8     | community  | Login manager daemon              |
 | **greetd-tuigreet**    | 0.9.1-r0      | community  | TUI greeter for greetd            |
 | **cage**               | 0.2.1-r0      | community  | Wayland single-app compositor     |
 | **wlroots**            | 0.19.2-r0     | community  | Wayland compositor library        |
-| **mesa**               | 25.2.7-r1     | main       | GPU drivers (Intel, AMD, nouveau) |
-| **NetworkManager**     | 1.54.2-r1     | main       | Network configuration             |
+| **mesa**               | 25.2.7-r2     | main       | GPU drivers (Intel, AMD, nouveau) |
 | **GRUB**               | 2.12-r8       | main       | EFI bootloader                    |
 | **Syslinux**           | 6.04_pre1-r19 | main       | BIOS bootloader (x86_64)          |
 | **cryptsetup**         | 2.8.1-r0      | main       | LUKS2 disk encryption             |
@@ -419,12 +420,12 @@ Key components included in TermOS v0.2.0 (Alpine Edge snapshot 20251125):
 | **alacritty**          | 0.16.1-r0     | community  | GPU-accelerated terminal          |
 | **cool-retro-term**    | 1.2.0-r0      | community  | Retro CRT-style terminal          |
 | **Midnight Commander** | 4.8.33-r2     | main       | File manager                      |
-| **btop**               | 1.4.0-r2      | community  | System monitor                    |
-| **vim**                | 9.1.1952-r0   | main       | Text editor                       |
-| **zsh**                | 5.9-r6        | main       | Default shell                     |
+| **btop**               | 1.4.5-r0      | community  | System monitor                    |
+| **vim**                | 9.1.1962-r0   | main       | Text editor                       |
+| **zsh**                | 5.9-r7        | main       | Default shell                     |
 
-**Snapshot Date**: November 25, 2025
-**Build Date**: December 8, 2025
+**Snapshot Date**: December 11, 2025
+**Build Date**: December 11, 2025
 **Architecture Support**: x86_64, aarch64
 
 Use `apk info -v <package>` on your installed system to check current package versions.
@@ -462,5 +463,5 @@ TermOS includes GPL-licensed software. Source code availability:
 
 ---
 
-**Version**: 2.0 (2025-12-02)
+**Version**: 3.0 (2025-12-11)
 **Installer**: termos-setup v2.0
