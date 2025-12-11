@@ -1,6 +1,6 @@
 # TermOS
 
-A minimal Linux distribution based on Alpine Linux, featuring term39 as the primary desktop environment. TermOS provides a modern DOS-like computing experience with Wayland compositor support and framebuffer modes.
+A Linux distribution built around the terminal, using term39 as its main user interface. Supports Wayland, pure TTY text mode and framebuffer text rendering.
 
 ## Overview
 
