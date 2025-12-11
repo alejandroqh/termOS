@@ -4,7 +4,7 @@ A Linux distribution built around the terminal, using term39 as its main user in
 
 ## Overview
 
-TermOS is built on Alpine Linux (~5MB base) with OpenRC init system, providing a lightweight yet powerful terminal-centric environment. The system boots directly into term39, a full-screen terminal multiplexer designed for productivity.
+TermOS is built on Alpine Linux with OpenRC init system, providing a lightweight yet powerful terminal-centric environment. The system boots directly into term39, a full-screen terminal multiplexer designed for productivity.
 
 **Version**: 0.3.0
 **Based on**: Alpine Linux Edge
