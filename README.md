@@ -6,12 +6,12 @@ A minimal Linux distribution based on Alpine Linux, featuring term39 as the prim
 
 TermOS is built on Alpine Linux (~5MB base) with OpenRC init system, providing a lightweight yet powerful terminal-centric environment. The system boots directly into term39, a full-screen terminal multiplexer designed for productivity.
 
-**Version**: 0.2.0
-**Based on**: Alpine Linux Edge (snapshot 20251125)
-**Kernel**: Linux Stable 6.17.11
+**Version**: 0.3.0
+**Based on**: Alpine Linux Edge
+**Kernel**: Linux LTS 6.18.0
 **Init System**: OpenRC
 **Display Manager**: greetd + tuigreet
-**Desktop Environment**: term39
+**Desktop Environment**: term39 v0.20.0
 
 ## Screenshots
 
