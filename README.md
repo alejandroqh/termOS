@@ -6,9 +6,9 @@ A Linux distribution built around the terminal, using term39 as its main user in
 
 TermOS is built on Alpine Linux with OpenRC init system, providing a lightweight yet powerful terminal-centric environment. The system boots directly into term39, a full-screen terminal multiplexer designed for productivity.
 
-**Version**: 0.3.0
-**Based on**: Alpine Linux Edge
-**Kernel**: Linux LTS 6.18.0-r5
+**Version**: 0.4.0
+**Based on**: Alpine Linux 3.23
+**Kernel**: Linux LTS 6.18
 **Init System**: OpenRC
 **Display Manager**: greetd + tuigreet
 **Desktop Environment**: term39 v0.20.0
@@ -343,14 +343,14 @@ TermOS provides multiple session types, selectable at login:
 - **No BIOS encryption**: LUKS2 only available on UEFI systems
 - **Single-user focus**: Optimized for single-user workstations
 - **Terminal-centric**: No traditional desktop environment (GNOME, KDE, etc.)
-- **Rolling release**: Based on Alpine Edge (may have package instability)
+- **Rolling release**: Based on Alpine 3.23 (may have package instability)
 - **Manual updates**: Using Alpine apk system packages
 
 ### Network Requirements
 
 - **Installation**: Can be done offline from ISO (all packages included)
 - **Updates**: Requires internet connection via NetworkManager
-- **Repositories**: Uses Alpine Edge repositories (https://dl-cdn.alpinelinux.org)
+- **Repositories**: Uses Alpine 3.23 repositories (https://dl-cdn.alpinelinux.org)
 
 ## Recovery Mode
 
@@ -393,13 +393,13 @@ After first boot:
 
 ## Package Versions
 
-Key components included in TermOS v0.3.0 (Alpine Edge snapshot 20251211):
+Key components included in TermOS v0.3.0 (Alpine 3.23):
 
 | Component              | Version       | Repository | Notes                             |
 | ---------------------- | ------------- | ---------- | --------------------------------- |
 | **term39**             | 0.20.0-r0     | termos     | Primary desktop environment       |
 | **termos-cc**          | 0.1.0-r1      | termos     | TermOS Control Center             |
-| **Alpine Linux**       | Edge 20251211 | -          | Rolling release snapshot          |
+| **Alpine Linux**       | v3.23         | -          | Rolling release snapshot          |
 | **Linux Kernel**       | 6.18.0-r5     | main       | linux-lts package                 |
 | **Linux Firmware**     | 20251125-r1   | main       | Complete firmware collection      |
 | **OpenRC**             | 0.63-r1       | main       | Init system                       |
@@ -429,6 +429,16 @@ Key components included in TermOS v0.3.0 (Alpine Edge snapshot 20251211):
 **Architecture Support**: x86_64, aarch64
 
 Use `apk info -v <package>` on your installed system to check current package versions.
+
+## Community Software
+
+TermOS includes community-contributed terminal applications:
+
+| Tool                                                    | Command       | Alias   | Description                                   | Author                                                   |
+| ------------------------------------------------------- | ------------- | ------- | --------------------------------------------- | -------------------------------------------------------- |
+| [treemd](https://github.com/Epistates/treemd)           | `treemd`      | `md`    | Terminal markdown viewer with tree navigation | [@nicholasjpaterno](https://github.com/nicholasjpaterno) |
+| [gravityfile](https://github.com/Epistates/gravityfile) | `gravityfile` | `files` | Terminal file manager                         | [@nicholasjpaterno](https://github.com/nicholasjpaterno) |
+| [dinky](https://github.com/sedwards2009/dinky)          | `dinky`       | `edit`  | Small terminal text editor                    | [@sedwards2009](https://github.com/sedwards2009)         |
 
 ## License
 
@@ -463,5 +473,5 @@ TermOS includes GPL-licensed software. Source code availability:
 
 ---
 
-**Version**: 3.0 (2025-12-11)
-**Installer**: termos-setup v2.0
+**Version**: 0.4.0 (2025-12-11)
+**Installer**: termos-setup v3.0

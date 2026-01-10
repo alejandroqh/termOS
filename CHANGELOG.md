@@ -3,6 +3,45 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-01-11
+
+### Added
+
+- **Community Software**: Terminal applications contributed by the community:
+  - **treemd** (`md`): Terminal markdown viewer with tree navigation by [@nicholasjpaterno](https://github.com/nicholasjpaterno)
+  - **gravityfile** (`files`): Terminal file manager by [@nicholasjpaterno](https://github.com/nicholasjpaterno)
+  - **dinky** (`edit`): Small terminal text editor by [@sedwards2009](https://github.com/sedwards2009)
+- **Multiple Terminal Emulators**: New session options with different terminal experiences:
+  - **Alacritty** (default): GPU-accelerated terminal with term39 color scheme
+  - **Cool Retro Term**: CRT aesthetic with scanlines and glow effects
+  - **foot**: Lightweight Wayland-native terminal
+- **term39 Color Scheme**: Custom color palette with dark blue background (#151728) and green foreground (#62AE68)
+- **Iosevka Nerd Font**: System-wide nerd font with programming ligatures and icon support
+- **Audio Stack**: Full PipeWire audio with ALSA and PulseAudio compatibility
+  - pulsemixer for volume control
+  - SOF firmware for modern laptops
+- **Bluetooth Support**: bluez with firmware for common adapters
+- **ACPI Power Management**: Brightness keys and lid close handling via acpid
+- **Session Variants**: Multiple boot options in tuigreet:
+  - Wayland Alacritty (default)
+  - Wayland Retro (CRT style)
+  - Wayland VM (optimized for virtual machines)
+  - Wayland Simple (minimal)
+  - Framebuffer mode
+  - TTY mode
+- **New Utilities**: btop, htop, mc, vim, bat, eza, lsd, viu, mpv, fastfetch, elinks, uv
+
+### Changed
+
+- **term39 update**: Updated to v1.1.0 (major update from v0.20.0)
+- **Default session**: Changed to Alacritty-based Wayland session for better font rendering
+
+### Fixed
+
+- **GRUB boot issues**: Fixed bootloader configuration
+
+---
+
 ## [0.3.0] - 2025-12-11
 
 ### Changed
@@ -152,13 +191,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Release Information
 
-**Version:** 0.3.0
-**Release Date:** December 11, 2025
+**Version:** 0.4.0
+**Release Date:** January 11, 2026
 **Status:** Beta Release
 **Architectures:** x86_64, aarch64
 **Base:** Alpine Linux Edge
-**Kernel:** Linux LTS 6.18.0
-**Desktop:** term39 v0.20.0
+**Kernel:** Linux LTS
+**Desktop:** term39 v1.1.0
 
 ### Checksums
 
@@ -184,6 +223,7 @@ Tested on:
 
 ---
 
+[0.4.0]: https://github.com/alejandroqh/termos/releases/tag/v0.4.0
 [0.3.0]: https://github.com/alejandroqh/termos/releases/tag/v0.3.0
 [0.2.0]: https://github.com/alejandroqh/termos/releases/tag/v0.2.0
 [0.1.0]: https://github.com/alejandroqh/termos/releases/tag/v0.1.0
