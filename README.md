@@ -23,12 +23,12 @@ TermOS is built on Alpine Linux with OpenRC init system, providing a lightweight
   <em>term39 with multiple terminals and system monitoring</em>
 </p>
 
-### Wayland Retro Session (Default)
+### Wayland Alacritty Session (Default)
 
 <p align="center">
-  <img src="screenshots/cool-retro-term-wayland.png" alt="CRT-style Retro Terminal" width="800"/>
+  <img src="screenshots/alacritty.png" alt="Alacritty GPU-accelerated Terminal" width="800"/>
   <br/>
-  <em>cool-retro-term with authentic CRT scanlines and phosphor glow</em>
+  <em>Alacritty GPU-accelerated terminal with crisp font rendering</em>
 </p>
 
 ### Framebuffer Mode
@@ -168,7 +168,7 @@ TermOS provides multiple session types, selectable at login:
 | **TTY**               | term39          | none       | Direct TTY (no compositor)               |
 | **FB Setup**          | term39          | none       | Framebuffer setup mode                   |
 
-**Default session**: Wayland Retro (for visual appeal)
+**Default session**: Wayland Alacritty (GPU-accelerated performance)
 
 ## Software Stack
 
